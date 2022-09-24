@@ -16,7 +16,7 @@ license: (ISC)
 
 E APERTA YES.
 
-escolher as dependências
+escolher as dependências:
 express - framework robusto - cor - http
 body-parser - realiza o parser - serialização das info que serão enviadas através das requisições da api
 cors - segurança - quem pode fazer a requisição? 
@@ -59,5 +59,10 @@ app.listen(21262, () => {
 ESCREVE NO TERMINAL: node index.js.
 PARA ELA FICAR ONLINE.
 
-NESSE MOMENTO O NODEMON NÃO ESTÁ SENDO USADO. PARA INICIAR ELE
-PARA O EXPRESS E ESCREVE: npm start
+NESSE MOMENTO O NODEMON NÃO ESTÁ SENDO USADO. 
+PARA INICIAR ELE COM O EXPRESS ESCREVER: npm start
+SE FIZER QUALQUER MODIFICAÇÃO, ELE SOBE COM AS MODIFICAÇÕES NOVAS.
+
+DISPONIBILIZAR REQUISIÇÕES PARA QUE OUTRAS SOLUÇÕES CONSUMAM A API
+
+VER COMENTÁRIOS DO PROJETO E SEGUIR POR LÁ.
