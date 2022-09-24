@@ -1,0 +1,63 @@
+
+VÍDEO: https://www.youtube.com/watch?v=Q9oVStZ1DJA&t=1114s
+
+API COM NODE 
+
+INSTALA O NODE E VISUAL CODE 
+
+INICIA COM NPM INIT E DÁ OS NOMES
+description: Primeira API
+entry point: (index.js) - ARQUIVO RAIZ
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+
+E APERTA YES.
+
+escolher as dependências
+express - framework robusto - cor - http
+body-parser - realiza o parser - serialização das info que serão enviadas através das requisições da api
+cors - segurança - quem pode fazer a requisição? 
+nodemon - pacote com reoreload - ele dá um refresh da nova aplicação
+morgan - toda requisição é mostrado pra gente - log
+
+INSTALA TODOS ELES:  npm install express body-parser morgan cors nodemon
+
+VAI EM SCRIPTS TIRA O QUE TAVA E COLOCA A CHAVE QUE QUANDO CHAMADA 
+IRÁ INICIALIZAR O QUE ESTIVER DENTRO
+
+"scripts": {
+    "start": "nodemon index.js"
+
+CRIA UM ARQUIVO INDEX.JS PARA INICIAR A CRIAÇÃO DO SERVIDOR
+
+const express = require('express')
+const morgan = require('morgan')
+const cors = require('cors')
+const bodyParser = require('body-parser')
+
+AS VARIÁVEIS RECEBEM TODOS OS PACOTES 
+
+PARAMETRIZANDO:
+
+const app = express()
+
+app.use(morgan('dev')) - LOG DE EXECUÇÃO 
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(express.json()) - DETERMINE O TIPO DE DADO QUE IRÁ RECEBER
+app.use(cors()) - RECEBE UMA PROPRIEDADE
+
+LIGANDO O SERVIDOR:
+21262 - é uma porta escolhida pelo professor da aula, aleatória
+
+app.listen(21262, () => {
+    console.log('Express started at http://localhost:21262')
+})
+
+ESCREVE NO TERMINAL: node index.js.
+PARA ELA FICAR ONLINE.
+
+NESSE MOMENTO O NODEMON NÃO ESTÁ SENDO USADO. PARA INICIAR ELE
+PARA O EXPRESS E ESCREVE: npm start
